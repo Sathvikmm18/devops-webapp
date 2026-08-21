@@ -9,7 +9,7 @@ app = FastAPI(
 @app.get("/")
 def home():
     return {
-        "message": "Hello from DevOps! Created by Sathvik M M",
+        "message": "Hello from Automated DevOps! Created by Sathvik M M",
         "status": "running"
     }
 
