@@ -7,7 +7,9 @@ client = TestClient(app)
 def test_home():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json()["status"] == "running"
+    assert response.headers["content-type"].startswith("text/html")
+    assert "DevOps" in response.text
+    assert "Sathvik M M" in response.text
 
 
 def test_health():
